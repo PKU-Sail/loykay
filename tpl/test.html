@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+Errors:
+<div style="background:red;margin-left:10%;width:80%;height:auto;">
+<table>
+	{loop="$errors"}
+	<tr><th>Position:</th><th>{$value["file"]} 第 {$value["line"]} 行</th></tr>
+	<tr><th>Reason:</th><th>{$value["message"]}</th></tr>
+	{/loop}
+</table>
+</div>
+<br>
+Warnings:
+<div style="background:blue;margin-left:10%;width:80%;height:auto; ">
+<table>
+	{loop="$warnings"}
+	<tr><th>Position:</th><th>{$value["file"]} 第 {$value["line"]} 行</th></tr>
+	<tr><th>Reason:</th><th>{$value["message"]}</th></tr>
+	{/loop}
+</table>
+</div>
+<br>
+Notices:
+<div style="background:blue;margin-left:10%;width:80%;height:auto; ">
+<table>
+	{loop="$notices"}
+	<tr><th>Position:</th><th>{$value["file"]} 第 {$value["line"]} 行</th></tr>
+	<tr><th>Reason:</th><th>{$value["message"]}</th></tr>
+	{/loop}
+</table>
+</div>
+<br>
+Exceptions:
+<div style="background:blue;margin-left:10%;width:80%;height:auto; ">
+<table>
+	{loop="$exceptions"}
+	<tr><th>Reason:</th><th>{$value["message"]}</th></tr>
+	{/loop}
+</table>
+</div>
+</body>
+</html>

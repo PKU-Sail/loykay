@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+Errors:
+<div style="background:red;margin-left:10%;width:80%;height:auto;">
+<table>
+	<?php if(isset($errors)&&is_array($errors)&&sizeof($errors)) foreach($errors as $key1=>$value1){?>
+	<tr><th>Position:</th><th><?php echo $value1["file"]; ?> 第 <?php echo $value1["line"]; ?> 行</th></tr>
+	<tr><th>Reason:</th><th><?php echo $value1["message"]; ?></th></tr>
+	<?php } ?>
+</table>
+</div>
+<br>
+Warnings:
+<div style="background:blue;margin-left:10%;width:80%;height:auto; ">
+<table>
+	<?php if(isset($warnings)&&is_array($warnings)&&sizeof($warnings)) foreach($warnings as $key1=>$value1){?>
+	<tr><th>Position:</th><th><?php echo $value1["file"]; ?> 第 <?php echo $value1["line"]; ?> 行</th></tr>
+	<tr><th>Reason:</th><th><?php echo $value1["message"]; ?></th></tr>
+	<?php } ?>
+</table>
+</div>
+<br>
+Notices:
+<div style="background:blue;margin-left:10%;width:80%;height:auto; ">
+<table>
+	<?php if(isset($notices)&&is_array($notices)&&sizeof($notices)) foreach($notices as $key1=>$value1){?>
+	<tr><th>Position:</th><th><?php echo $value1["file"]; ?> 第 <?php echo $value1["line"]; ?> 行</th></tr>
+	<tr><th>Reason:</th><th><?php echo $value1["message"]; ?></th></tr>
+	<?php } ?>
+</table>
+</div>
+<br>
+Exceptions:
+<div style="background:blue;margin-left:10%;width:80%;height:auto; ">
+<table>
+	<?php if(isset($exceptions)&&is_array($exceptions)&&sizeof($exceptions)) foreach($exceptions as $key1=>$value1){?>
+	<tr><th>Reason:</th><th><?php echo $value1["message"]; ?></th></tr>
+	<?php } ?>
+</table>
+</div>
+</body>
+</html>
