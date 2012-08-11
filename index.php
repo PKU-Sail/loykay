@@ -2,7 +2,7 @@
 //require_once './common/init.php';
 $conn = mysql_connect(SAE_MYSQL_HOST_S . ':' . SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS) or die(mysql_error());
 
-/*error_reporting(E_PARSE);
+/*error_reporting(E_PARSE); // ceshi
 require_once './lib/core/ErrorHandler.php';
 set_error_handler(array('ErrorHandler','captureError'));
 set_exception_handler(array('ErrorHandler','captureException'));
