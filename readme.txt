@@ -1,4 +1,4 @@
-一个简单的PHP框架.
+一个简单的PHP框架. hahahah  hahahahahahahaah
 
 文件目录:
 common: 全局常量定义和全局方法实现.
